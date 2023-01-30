@@ -1,10 +1,10 @@
 from django.http import HttpResponse
 from datetime import datetime
-from django.http import JsonResponse
+# from django.http import JsonResponse
 
 
 def ping(request):
         data = {
-            "new" : datetime.now()
+            "message" : datetime.now()
         }
-        return JsonResponse(data)
+        return HttpResponse(data)
